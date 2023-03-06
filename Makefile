@@ -56,6 +56,7 @@ test: ## run tests quickly with the default Python
 	pytest
 
 test-all: ## run pytest, doctests, examples
+	set -e
 	pytest --cov=testporj2 --cov-report html
 	pytest --cov=testporj2 --cov-report html --cov-append scripts/*_example.py
 	pytest --cov-report html --cov=testporj2 --cov-append --doctest-modules testporj2/
